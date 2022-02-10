@@ -3,7 +3,7 @@
 ##https://github.com/MilesJuddPorter/leagueSpeak
 ##https://www.reddit.com/r/leagueoflegends/comments/ri0yep/speech_to_text_in_league_of_legends_using_python/
 
-####Edited by 4Liryc
+####Edited for the German Guys <3 by 4Liryc
 ####Bei Fragen Discord: 4Liryc#3210
 
 ####Install guide####
@@ -13,32 +13,33 @@
 #pip install sounddevice
 #pip install wave
 #pip install keyboard
-#pip install pyautogui
+#pip install pyautoguigg
+
+
 #pip install deepl
 
-#Microsoft store öffnen python eingeben (ich habe 3.10 benutzt, installieren)
-#https://www.deepl.com/de/pro-api/ DeepL API Free oder pro registrieren -> 
-#Runterscrollen bis "So funktioniert's DeePL API Free/Pro" auswählen und nur den teil nach auth_key= kopieren!! z.B 8d**************
+#Microsoft store öffnen python eingeben (ich habe 3.10 benutzt installieren)
+#https://www.deepl.com/de/pro-api/ DeepL API Free oder pro registrieren -> Runterscrollen bis "So funktioniert's DeePL API Free/Pro" auswählen und nur den teil nach auth_key= kopieren!! z.B 8d**************
 
-#### Import Modules ####
+####Import Modules####
 import speech_recognition as sr
 import numpy as np
 import sounddevice as sd
 import wave
 
 import keyboard
-import pyautogui as pag
+import pyautogui
 import deepl 
 
 from time import sleep
 
 
-#### Code #####
+
 FILE_NAME = './test.wav'  #File name to save
 wave_length = 4  #Recording length (seconds)
 sample_rate = 16_000  #Sampling frequency
 while True:
-    keyboard.wait('g')
+    keyboard.wait('n')
     print("RECORDING ***")
     #Start recording (wave_length Record for seconds. Wait until the recording is finished with wait)
     data = sd.rec(int(wave_length * sample_rate), sample_rate, channels=1)
@@ -57,31 +58,23 @@ while True:
         wb.setframerate(sample_rate)
         wb.writeframes(data.tobytes())  #Convert to byte string
        
-       
-   
+
    
     filename = "test.wav"
     r = sr.Recognizer()
-   
+ 
     with sr.AudioFile(filename) as source:
         # listen for the data (load audio to memory)
         audio_data = r.record(source)
         # recognize (convert from speech to text)
         text = r.recognize_google(audio_data, language="de-DE")
-        translator = deepl.Translator("#####Dein Key####") 
+        translator = deepl.Translator("####Your Key####") 
         result = translator.translate_text(text, target_lang="en-US") 
         translated_text = result.text
         print(translated_text)
 
     keyboard.press_and_release('enter')
     sleep(0.01)
-    pag.write(translated_text)
+    pyautogui.FAILSAFE = False
+    pyautogui.write(translated_text)
     keyboard.press_and_release('enter')
-
-
-
-
-    ###Ausführen? Ort deines vertrauen ablegen z.B C:\Users\4Liryc\Dokumente\LoLSpeakSkript\LeagueSpeak.py kopieren!
-    # cmd öffnen "cd C:\Users\4Liryc\Dokumente\LoLSpeakSkript" Enter
-    # Eingeben: python LeagueSpeak.py Enter
-    # Have Fun :) <3
