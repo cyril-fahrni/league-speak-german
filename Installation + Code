@@ -16,7 +16,7 @@
 #pip install pyautogui
 #pip install deepl
 
-#Microsoft store öffnen python eingeben (ich habe 3.10 benutzt installieren)
+#Microsoft store öffnen python eingeben (ich habe 3.10 benutzt, installieren)
 #https://www.deepl.com/de/pro-api/ DeepL API Free oder pro registrieren -> 
 #Runterscrollen bis "So funktioniert's DeePL API Free/Pro" auswählen und nur den teil nach auth_key= kopieren!! z.B 8d**************
 
@@ -82,6 +82,6 @@ while True:
 
 
     ###Ausführen? Ort deines vertrauen ablegen z.B C:\Users\4Liryc\Dokumente\LoLSpeakSkript\LeagueSpeak.py kopieren!
-    # cmd öffnen "cd C:\Users\Cyril\OneDrive\Dokumente\LoLSpeakSkript" Enter
+    # cmd öffnen "cd C:\Users\4Liryc\Dokumente\LoLSpeakSkript" Enter
     # Eingeben: python LeagueSpeak.py Enter
     # Have Fun :) <3
