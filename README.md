@@ -1,4 +1,4 @@
 # league-speak-german
 League of Legends Speach to Text with DeepL API
 
-Wichtig: Momentan nur für soloQ nützlich! Ohne Dc/TS im hintergrund!
+Wichtig: Das skript ist momentan nur für SoloQ optimiert! Also ohne DC/TS im hintergrund!!!
