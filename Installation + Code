@@ -17,7 +17,8 @@
 #pip install deepl
 
 #Microsoft store öffnen python eingeben (ich habe 3.10 benutzt installieren)
-#https://www.deepl.com/de/pro-api/ DeepL API Free oder pro registrieren -> Runterscrollen bis "So funktioniert's DeePL API Free/Pro" auswählen und nur den teil nach auth_key= kopieren!! z.B 8d**************
+#https://www.deepl.com/de/pro-api/ DeepL API Free oder pro registrieren -> 
+#Runterscrollen bis "So funktioniert's DeePL API Free/Pro" auswählen und nur den teil nach auth_key= kopieren!! z.B 8d**************
 
 #### Import Modules ####
 import speech_recognition as sr
